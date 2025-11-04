@@ -1,0 +1,12 @@
+{
+  "name": "hikari-markets",
+  "version": "1.0.0",
+  "description": "Glassmorphism-inspired stock dashboard for Hikari Markets",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

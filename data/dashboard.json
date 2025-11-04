@@ -1,0 +1,199 @@
+{
+  "watchlist": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "price": 191.62,
+      "change": 1.38,
+      "changePercent": 0.73,
+      "volatility": "中",
+      "volume": 58792145,
+      "marketCap": "2.97T",
+      "sentiment": "positive",
+      "sector": "Tech"
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft Corp.",
+      "price": 415.12,
+      "change": -2.07,
+      "changePercent": -0.50,
+      "volatility": "低",
+      "volume": 24650811,
+      "marketCap": "3.10T",
+      "sentiment": "neutral",
+      "sector": "Tech"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA Corp.",
+      "price": 894.32,
+      "change": 16.43,
+      "changePercent": 1.87,
+      "volatility": "高",
+      "volume": 48600751,
+      "marketCap": "2.24T",
+      "sentiment": "positive",
+      "sector": "Tech"
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc. Class A",
+      "price": 154.19,
+      "change": -0.94,
+      "changePercent": -0.61,
+      "volatility": "中",
+      "volume": 20114709,
+      "marketCap": "1.92T",
+      "sentiment": "neutral",
+      "sector": "Tech"
+    },
+    {
+      "symbol": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "price": 197.25,
+      "change": 2.86,
+      "changePercent": 1.47,
+      "volatility": "低",
+      "volume": 9312456,
+      "marketCap": "571B",
+      "sentiment": "positive",
+      "sector": "Finance"
+    },
+    {
+      "symbol": "MA",
+      "name": "Mastercard Inc.",
+      "price": 463.72,
+      "change": 3.91,
+      "changePercent": 0.85,
+      "volatility": "中",
+      "volume": 3819054,
+      "marketCap": "436B",
+      "sentiment": "positive",
+      "sector": "Finance"
+    },
+    {
+      "symbol": "TSLA",
+      "name": "Tesla Inc.",
+      "price": 206.41,
+      "change": 4.65,
+      "changePercent": 2.30,
+      "volatility": "高",
+      "volume": 61249087,
+      "marketCap": "657B",
+      "sentiment": "positive",
+      "sector": "Energy"
+    },
+    {
+      "symbol": "XOM",
+      "name": "Exxon Mobil Corp.",
+      "price": 113.58,
+      "change": -0.73,
+      "changePercent": -0.64,
+      "volatility": "中",
+      "volume": 20411509,
+      "marketCap": "461B",
+      "sentiment": "neutral",
+      "sector": "Energy"
+    },
+    {
+      "symbol": "NEE",
+      "name": "NextEra Energy Inc.",
+      "price": 72.44,
+      "change": 1.11,
+      "changePercent": 1.56,
+      "volatility": "中",
+      "volume": 13490876,
+      "marketCap": "149B",
+      "sentiment": "positive",
+      "sector": "Energy"
+    },
+    {
+      "symbol": "UNH",
+      "name": "UnitedHealth Group Inc.",
+      "price": 514.06,
+      "change": -3.42,
+      "changePercent": -0.66,
+      "volatility": "低",
+      "volume": 2864155,
+      "marketCap": "478B",
+      "sentiment": "neutral",
+      "sector": "Healthcare"
+    }
+  ],
+  "headlines": [
+    {
+      "title": "米国株概況",
+      "detail": "NYダウは小幅続伸。半導体と金融が市場をけん引",
+      "tone": "positive"
+    },
+    {
+      "title": "欧州セッション",
+      "detail": "ECBの議事要旨公表を控え、主要指数は横ばい推移",
+      "tone": "neutral"
+    },
+    {
+      "title": "アジア市場",
+      "detail": "日経平均は反落も、TOPIXは年初来高値を維持",
+      "tone": "neutral"
+    }
+  ],
+  "insights": [
+    {
+      "title": "NVIDIA、データセンター需要が想定を上回る",
+      "summary": "北米ハイパースケーラー向け受注が過去最高を更新。FY25の売上高ガイダンスを上方修正。",
+      "confidence": 88
+    },
+    {
+      "title": "再生可能エネルギー銘柄に資金回帰",
+      "summary": "NEEを中心としたクリーン電力企業が米国の税制優遇で買い直される。",
+      "confidence": 74
+    },
+    {
+      "title": "メガバンクの自己資本比率が改善",
+      "summary": "JPMとMAが資本効率を高め、配当利回りも3%台を堅持。",
+      "confidence": 69
+    }
+  ],
+  "community": [
+    {
+      "author": "Hinata · Tech Growth",
+      "mood": "🟢 強気",
+      "post": "NVDAの週次RSIがまだ60台。短期押し目を拾っていく予定です。",
+      "time": "3 分前"
+    },
+    {
+      "author": "Akira · Income",
+      "mood": "🧠 ニュートラル",
+      "post": "NEEを毎月積立中。配電網アップグレード需要でEPSの上振れに期待。",
+      "time": "11 分前"
+    },
+    {
+      "author": "Maya · Macro",
+      "mood": "🌱 長期",
+      "post": "ドル高一服でEM ETFを追加。リスクパリティでヘッジを入れています。",
+      "time": "28 分前"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "米国株決算ナイト: 4月セッション",
+      "mentor": "Guest: Naomi Takeda (Equity Strategist)",
+      "schedule": "本日 20:00"
+    },
+    {
+      "title": "AIセクターの本質価値を探る",
+      "mentor": "Mentor: Kota Ishii",
+      "schedule": "木曜 19:30"
+    },
+    {
+      "title": "配当ポートフォリオのアップデート術",
+      "mentor": "Mentor: Daniel Park",
+      "schedule": "土曜 11:00"
+    }
+  ],
+  "sparkline": {
+    "label": "MSCI ACWI (10日間)",
+    "series": [100, 101, 102, 103, 102, 104, 106, 108, 109, 110.2]
+  }
+}

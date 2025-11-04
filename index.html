@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hikari Markets | 洗練された株式アプリ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="theme-dark">
+  <div class="background-texture" aria-hidden="true"></div>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="brand">
+        <span class="brand-icon">◆</span>
+        <div class="brand-copy">
+          <span class="brand-title">Hikari Markets</span>
+          <span class="brand-tagline">インサイトで未来を照らす</span>
+        </div>
+      </div>
+      <nav class="top-nav" aria-label="メインナビゲーション">
+        <button class="nav-chip" data-target="overview">マーケット</button>
+        <button class="nav-chip" data-target="watchlist">ウォッチリスト</button>
+        <button class="nav-chip" data-target="insights">インサイト</button>
+        <button class="nav-chip" data-target="community">コミュニティ</button>
+      </nav>
+      <div class="actions">
+        <button class="ghost" id="theme-toggle" aria-label="テーマを切り替える">
+          <span class="icon">☀︎</span>
+        </button>
+        <button class="primary">ログイン</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">マーケットダイジェスト</p>
+          <h1>
+            世界のトレンドをひと目で。<br />
+            直感的で美しい株式体験を。
+          </h1>
+          <p class="subtitle">
+            リアルタイムの株価、AIによる洞察、感覚的な操作性。<br />
+            Hikari Markets は投資のスタンダードを再定義します。
+          </p>
+          <div class="hero-actions">
+            <button class="primary">ポートフォリオを作成</button>
+            <button class="secondary">デモを体験</button>
+          </div>
+          <p class="data-status" id="data-status" role="status" aria-live="polite">データを読み込み中...</p>
+          <dl class="hero-metrics">
+            <div>
+              <dt>本日の注目銘柄</dt>
+              <dd id="metric-leader">-</dd>
+            </div>
+            <div>
+              <dt>平均ボラティリティ</dt>
+              <dd id="metric-volatility">-</dd>
+            </div>
+            <div>
+              <dt>AIアクティビティ指数</dt>
+              <dd id="metric-ai">-</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero-visual" role="presentation">
+          <div class="glass-card">
+            <header>
+              <span class="label">モーニングブリーフ</span>
+              <span class="time" id="market-time">00:00</span>
+            </header>
+            <div class="brief-items" id="brief-container"></div>
+          </div>
+          <div class="glass-card" id="sparkline-card">
+            <header>
+              <span class="label">グローバルトレンド</span>
+              <span class="chip" id="sparkline-delta" aria-live="polite">+0.00%</span>
+            </header>
+            <svg viewBox="0 0 300 120" role="img" aria-labelledby="sparkline-title sparkline-desc">
+              <title id="sparkline-title">過去10日間のグローバル指数推移</title>
+              <desc id="sparkline-desc">滑らかな上昇トレンドを描くラインチャート</desc>
+              <defs>
+                <linearGradient id="sparkline-gradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="var(--accent-400)" />
+                  <stop offset="100%" stop-color="var(--accent-200)" />
+                </linearGradient>
+              </defs>
+              <path id="sparkline-path" fill="none" stroke="url(#sparkline-gradient)" stroke-width="4" stroke-linecap="round" />
+            </svg>
+            <div class="sparkline-legend" id="sparkline-legend"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="watchlist">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">あなたのウォッチリスト</p>
+            <h2>気になる銘柄をスマートに管理</h2>
+          </div>
+          <div class="panel-actions">
+            <label class="search">
+              <span class="icon">🔍</span>
+              <input type="search" id="watchlist-search" placeholder="銘柄やティッカーを検索" />
+            </label>
+            <div class="chip-group" role="group" aria-label="セクターで絞り込み">
+              <button class="chip is-active" data-sector="all">すべて</button>
+              <button class="chip" data-sector="Tech">テック</button>
+              <button class="chip" data-sector="Finance">金融</button>
+              <button class="chip" data-sector="Energy">エネルギー</button>
+              <button class="chip" data-sector="Healthcare">ヘルスケア</button>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrapper" role="region" aria-live="polite">
+          <table>
+            <thead>
+              <tr>
+                <th>銘柄</th>
+                <th>価格</th>
+                <th>変動</th>
+                <th>ボラティリティ</th>
+                <th>出来高</th>
+                <th>時価総額</th>
+                <th>ムード</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="watchlist-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel two-column" id="insights">
+        <article class="card-column">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">AI インサイト</p>
+              <h2>データに基づくアクション提案</h2>
+            </div>
+          </div>
+          <div class="insight-feed" id="insight-feed"></div>
+        </article>
+        <aside class="card-column">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">コミュニティパルス</p>
+              <h2>投資家の声をリアルタイムに</h2>
+            </div>
+          </div>
+          <ul class="pulse-list" id="community-feed"></ul>
+        </aside>
+      </section>
+
+      <section class="panel" id="community">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">ラーニングハブ</p>
+            <h2>学び続ける投資コミュニティ</h2>
+          </div>
+          <button class="secondary">すべてのセッションを見る</button>
+        </div>
+        <div class="session-grid" id="session-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>Hikari Markets</strong>
+        <p>© 2025 Radiant Labs. すべての投資はリスクを伴います。</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">会社概要</a>
+        <a href="#">利用規約</a>
+        <a href="#">プライバシーポリシー</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
